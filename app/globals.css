@@ -10,7 +10,7 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
+  --background: #FFFFFF;
   --foreground: oklch(0.141 0.005 285.823);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.141 0.005 285.823);
@@ -46,8 +46,8 @@
 }
 
 .dark {
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.985 0 0);
+  --background: #00000;
+  --foreground: #FFFFFF;
   --card: oklch(0.141 0.005 285.823);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.141 0.005 285.823);
@@ -77,7 +77,7 @@
   --sidebar-accent: oklch(0.274 0.006 286.033);
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.274 0.006 286.033);
-  --sidebar-ring: oklch(0.442 0.017 285.786);
+  --sidebar-ring: oklch(0.442 0.017 285.786); 
 }
 
 @theme inline {
@@ -126,4 +126,43 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@font-face {
+  font-family: 'TimesNewRomanMT-CondensedBold';
+  src: url('/fonts/Times New Roman MT Condensed Bold.otf') format('opentype');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeue-Bold';
+  src: url('/fonts/HelveticaNeue Bold.ttf') format('truetype');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'TimesNewRomanMT-CondensedBold', serif;
+}
+
+.red-shadow {
+  text-shadow: 7px 7px 1px #C90006;
+}
+
+
+.about-p {
+  font-family: sans-serif;
+}
+
+.contact {
+  font-family: 'HelveticaNeue-Bold', sans-serif;
+  
+}
+
+.contact-item:hover {
+  text-shadow: 7px 7px 1px #C90006;
+  transition: text-shadow 0.15s ease-in-out;
 }
